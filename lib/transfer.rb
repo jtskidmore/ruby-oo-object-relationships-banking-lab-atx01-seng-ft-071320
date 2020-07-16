@@ -21,7 +21,7 @@ class Transfer
   def status=(status)
     @status = status
   end
-  
+
 binding.pry
   def valid?
     if @sender.valid? && @receiver.valid?
