@@ -39,7 +39,7 @@ class Transfer
     elsif @status == "pending" && @sender.balance >= @amount && @receiver.valid? == false
       @status = "rejected"
       p "Transaction rejected. Please check your account balance."
-      
+
     end
 
   end
