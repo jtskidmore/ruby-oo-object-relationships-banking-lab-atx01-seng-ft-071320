@@ -31,18 +31,14 @@ class Transfer
       @sender.deposit(-@amount)
       @receiver.deposit(@amount)
       @status = "complete"
-
     elsif @status == "pending" && @sender.balance < @amount && @receiver.valid?
       @status = "rejected"
       "Transaction rejected. Please check your account balance."
-
     elsif @status == "complete"
       nil
-
     elsif @status == "pending" && @sender.balance >= @amount && @receiver.valid? == false
       @status = "rejected"
       "Transaction rejected. Please check your account balance."
-      
     end
   end
 
