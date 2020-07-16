@@ -18,7 +18,7 @@ class Transfer
       false
     end
   end
-
+binding.pry
   def execute_transaction
     if @status == "pending" && @sender.balance >= @amount
       @sender.deposit(-@amount)
