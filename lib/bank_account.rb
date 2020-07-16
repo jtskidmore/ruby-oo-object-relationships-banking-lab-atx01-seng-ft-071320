@@ -29,8 +29,8 @@ class BankAccount
   end
 
   def display_balance
-    gh = balance
-    "Your balance is $#{gh}."
+    money = balance
+    "Your balance is $#{money}."
   end
 
   def valid?
