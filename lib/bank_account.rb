@@ -26,11 +26,11 @@ class BankAccount
   end
 
   def deposit (amount)
-    @deposit += amount
   end
 
   def display_balance
-
+    gh = balance
+    "Your balance is #{gh}"
   end
 
   def valid?
