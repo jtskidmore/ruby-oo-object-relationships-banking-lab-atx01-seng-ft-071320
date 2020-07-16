@@ -27,15 +27,20 @@ class Transfer
   end
 
   def execute_transaction
-    if @status == "pending" && @sender.balance >= @amount
+    if @status == "pending" && @sender.balance >= @amount && @receiver.valid?
       @sender.deposit(-@amount)
       @receiver.deposit(@amount)
       @status = "complete"
-    elsif @status == "pending" && @sender.balance < @amount
-      p "Transaction rejected. Please check your account balance."
-    else
+    elsif @status == "pending" && @sender.balance < @amount && @receiver.valid?
+      "Transaction rejected. Please check your account balance."
+      @status = "rejected"
+    elsif @status == "complete"
       nil
+    elsif @status == "pending" && @sender.balance >= @amount && @receiver.valid? == false
+      @status = "rejected"
+      "Transaction rejected. Please check your account balance."
     end
+
   end
 
 end
