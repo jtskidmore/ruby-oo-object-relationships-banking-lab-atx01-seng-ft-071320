@@ -29,9 +29,9 @@ class Transfer
     elsif @status == "complete"
       nil
     end
-      
-      
-      
+
+
+
   end
 
 end
