@@ -20,9 +20,13 @@ class Transfer
   end
 
   def execute_transaction
-    @sender.deposit(-@amount)
-    @receiver.deposit(@amount)
-    @status = "complete"
+    if @status == "pending"
+      @sender.deposit(-@amount)
+      @receiver.deposit(@amount)
+      @status = "complete"
+    else
+      nil
+    end
   end
 
 end
