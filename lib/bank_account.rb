@@ -2,7 +2,7 @@ require 'pry'
 
 class BankAccount
 
-  attr_accessor :balance
+  attr_accessor :balance, :status
 
   @@all = []
 
@@ -15,10 +15,6 @@ class BankAccount
 
   def self.all
     @@all
-  end
-
-  def status
-    @status
   end
 
   def name
@@ -35,11 +31,7 @@ class BankAccount
   end
 
   def valid?
-    if status == "open" && balance > 0
-      true
-    else
-      false
-    end
+    if
   end
 
   def close_account
