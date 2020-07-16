@@ -8,6 +8,7 @@ class BankAccount
     @name = name
     @balance = 1000
     @status = "open"
+    self.class.all << self
   end
 
 
