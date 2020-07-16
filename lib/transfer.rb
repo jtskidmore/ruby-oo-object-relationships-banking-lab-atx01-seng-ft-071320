@@ -25,7 +25,6 @@ class Transfer
         @sender.deposit(-@amount)
         @receiver.deposit(@amount)
         @status = "complete"
-        binding.pry
       elsif @sender.balance < @amount
         "Transaction rejected. Please check your account balance."
       end
