@@ -26,7 +26,7 @@ class Transfer
     @status = status
   end
 
-binding.pry
+
   def valid?
     if @sender.valid? && @receiver.valid?
       true
@@ -34,7 +34,7 @@ binding.pry
       false
     end
   end
-binding.pry
+
   def execute_transaction
     if @status == "pending" && @sender.balance >= @amount
       @sender.deposit(-@amount)
@@ -46,5 +46,4 @@ binding.pry
       nil
     end
   end
-binding.pry
 end
