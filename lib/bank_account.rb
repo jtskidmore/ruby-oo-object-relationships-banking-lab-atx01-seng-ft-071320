@@ -27,4 +27,8 @@ class BankAccount
     @name
   end
 
+  def deposit (amount)
+    
+  end
+
 end
