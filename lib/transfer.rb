@@ -11,7 +11,7 @@ class Transfer
     @status = "pending"
   end
 
-  def status 
+  def status
     @status
   end
 binding.pry
