@@ -2,6 +2,8 @@ require 'pry'
 
 class BankAccount
 
+  attr_accessor :balance
+
   @@all = []
 
   def initialize (name)
@@ -17,10 +19,6 @@ class BankAccount
 
   def status
     @status
-  end
-
-  def balance
-    @balance
   end
 
   def name
@@ -40,7 +38,7 @@ class BankAccount
   end
 
   def close_account
-    
+
   end
 
 end
