@@ -11,6 +11,9 @@ class BankAccount
     self.class.all << self
   end
 
+  def status
+    @status
+  end
 
   def balance
     @balance
