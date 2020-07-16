@@ -13,19 +13,10 @@ class Transfer
     @status = "pending"
     self.class.all << self
   end
-
+binding.pry
   def self.all
     @@all
   end
-
-  def status
-    @status
-  end
-
-  def status=(status)
-    @status = status
-  end
-
 
   def valid?
     if @sender.valid? && @receiver.valid?
