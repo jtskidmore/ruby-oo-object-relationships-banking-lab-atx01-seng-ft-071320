@@ -2,9 +2,10 @@ require 'pry'
 
 class Transfer
 
-  def initialize (sender, receiver)
+  def initialize (sender, receiver, amount)
     @sender = sender
     @receiver = receiver
+    @amount = amount
     @status = "pending"
   end
 
