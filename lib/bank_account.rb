@@ -28,15 +28,15 @@ class BankAccount
   end
 
   def deposit (amount)
-    
+
   end
 
   def display_balance
-    
+
   end
 
-  def valid? 
-    
+  def valid?
+
   end
 
   def close_account
