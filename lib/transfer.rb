@@ -29,7 +29,7 @@ class Transfer
       elsif @sender.balance < @amount
         "Transaction rejected. Please check your account balance."
       end
-    else
+    elsif @status == "complete"
       nil
     end
   end
