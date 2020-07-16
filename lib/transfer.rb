@@ -14,6 +14,10 @@ class Transfer
     self.class.all << self
   end
 
+  def self.all
+    @@all
+  end
+
   def status
     @status
   end
