@@ -2,7 +2,7 @@ require 'pry'
 
 class Transfer
 
-  attr_accessor :sender, :receiver, :amount
+  attr_accessor :sender, :receiver, :amount, :status
 
   @@all = []
 
