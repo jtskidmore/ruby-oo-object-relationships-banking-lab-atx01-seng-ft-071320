@@ -30,7 +30,7 @@ class BankAccount
 
   def display_balance
     gh = balance
-    "Your balance is #{gh}"
+    "Your balance is $#{gh}."
   end
 
   def valid?
