@@ -13,7 +13,7 @@ class Transfer
     @status = "pending"
     self.class.all << self
   end
-binding.pry
+
   def self.all
     @@all
   end
