@@ -33,12 +33,12 @@ class Transfer
       @status = "complete"
     elsif @status == "pending" && @sender.balance < @amount && @receiver.valid?
       @status = "rejected"
-      p "Transaction rejected. Please check your account balance."
+      "Transaction rejected. Please check your account balance."
     elsif @status == "complete"
       nil
     elsif @status == "pending" && @sender.balance >= @amount && @receiver.valid? == false
       @status = "rejected"
-      p "Transaction rejected. Please check your account balance."
+      "Transaction rejected. Please check your account balance."
 
     end
 
